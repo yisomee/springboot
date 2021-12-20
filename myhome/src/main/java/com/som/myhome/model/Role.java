@@ -1,9 +1,12 @@
 package com.som.myhome.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import lombok.Data;
 
@@ -16,5 +19,8 @@ public class Role {
     private Long id;
 
     private String name;
+
+    @ManyToMany(mappedBy = "roles")
+    private List<User> users;
 
 }
