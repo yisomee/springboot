@@ -1,0 +1,14 @@
+server:
+  port: 7272
+
+spring:
+  datasource: # DB Connect Setting
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.1.20:33066/yss_test?characterEncoding=UTF-8
+    username: arms
+    password: yellotail3737
+  jpa:
+    hibernate:
+      ddl-auto: update
+    # show-sql: true
+    # initialization-mode: always
